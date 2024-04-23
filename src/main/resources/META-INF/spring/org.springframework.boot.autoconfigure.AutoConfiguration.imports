@@ -1,0 +1,4 @@
+com.jorgedavi.boot.jda.JDAAutoConfiguration
+com.jorgedavi.boot.jda.event.JDAEventPublisherAutoConfiguration
+com.jorgedavi.boot.jda.event.ListenerAdapterAutoConfiguration
+com.jorgedavi.boot.jda.command.auto.SlashCommandAutoConfiguration
