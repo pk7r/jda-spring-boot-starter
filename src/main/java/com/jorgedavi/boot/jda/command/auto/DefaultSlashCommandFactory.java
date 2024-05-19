@@ -32,14 +32,7 @@ class DefaultSlashCommandFactory extends SlashCommandFactory {
 
     @Override
     public void save(SlashCommandDefinition data) {
-        getComponents()
-                .stream()
-                .filter(d -> exists(d.getFullCommandName()))
-                .findFirst()
-                .ifPresentOrElse(c -> {
-                    val message = "Command %s is already registered".formatted(c.getFullCommandName());
-                    throw new IllegalStateException(message);
-                }, () -> getComponents().add(data));
+        getComponents().add(data);
     }
 
     @Override
