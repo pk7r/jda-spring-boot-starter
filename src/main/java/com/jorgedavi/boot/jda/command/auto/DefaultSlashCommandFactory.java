@@ -35,7 +35,6 @@ class DefaultSlashCommandFactory extends SlashCommandFactory {
         getComponents()
                 .stream()
                 .filter(d -> exists(d.getFullCommandName()))
-                .filter(d -> exists(d.getCommandClass()))
                 .findFirst()
                 .ifPresentOrElse(c -> {
                     val message = "Command %s is already registered".formatted(c.getFullCommandName());
